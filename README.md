@@ -1,5 +1,7 @@
 The `docker-compose build` doesn't seem to be obeying .dockerignore?
 
+topdir and subdir get built as the same image, but subdir_app doesn't, I'm assuming because it's using a different build context that isn't respecting .dockerignore?
+
 ```
 $ docker build -t topdir . && cd subdir && docker build -t subdir ../ && docker-compose build
 Sending build context to Docker daemon 63.49 kB
