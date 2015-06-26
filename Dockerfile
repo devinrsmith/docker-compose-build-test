@@ -1,3 +1,3 @@
 FROM busybox
-COPY docker-entrypoint.sh /
+COPY . /
 ENTRYPOINT ["/docker-entrypoint.sh"]
